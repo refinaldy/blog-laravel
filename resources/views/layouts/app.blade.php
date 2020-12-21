@@ -34,7 +34,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @guest
+                            <a role="button" class="nav-link" href="/article">Articles</a>
+                        @else
+                            <a role="button" class="nav-link" href="/article">Articles</a>
+                            <a role="button" class="nav-link" href="/article/create">+New Article</a>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->

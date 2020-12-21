@@ -6,9 +6,9 @@
     <h1>Halaman Artikel</h1>
     
     @foreach ($articles->chunk(3) as $articleChunk)
-        <div class="row ">
+        <div class="row mr-2 ml-2">
             @foreach ($articleChunk as $article)
-                <div class="col card mb-2 ml-1 mr-1">
+                <div class="col card mb-2 ">
                     @if($article->thumbnail)
                     <img src="/image/{{$article->thumbnail}}" class="card-img-top mt-1">
                     @endif
