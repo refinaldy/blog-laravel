@@ -14,7 +14,10 @@
                         </div>
                     @endif
                         <h4>Hi, {{ Auth::user()->name }}</h4>
+                        
                     {{ __('You are logged in!') }}
+                    <br>
+                    <a href="/article" class="btn btn-info btn-sm"><h4>Show Article</h4></a>
                 </div>
             </div>
         </div>
