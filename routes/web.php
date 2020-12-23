@@ -23,6 +23,6 @@ Route::resource('article', 'ArticleController');
 // Route::put('/article/{id}', 'ArticleController@update');
 // Route::delete('/article/{id}', 'ArticleController@destroy');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware(('verified'));
