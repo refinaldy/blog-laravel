@@ -7,7 +7,6 @@ Membuat artikel baru- Refimadras
 @section('content')
     <h1>Buat artikel baru</h1>
 
-
     <form action="/article" method="POST" enctype="multipart/form-data">
         @csrf
         <x-input field="title" label="Judul" type="text" />

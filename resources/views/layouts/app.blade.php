@@ -37,8 +37,12 @@
                         @guest
                             <a role="button" class="nav-link" href="/article">Articles</a>
                         @else
-                            <a role="button" class="nav-link" href="/article">Articles</a>
-                            <a role="button" class="nav-link" href="/article/create">+New Article</a>
+                            @if(Auth::user()->admin == true)
+                                    <a role="button" class="nav-link" href="/article">Articles</a>
+                                    <a role="button" class="nav-link" href="/article/create">+New Article</a>
+                            @else    
+                                    <a role="button" class="nav-link" href="/article">Articles</a>
+                            @endif
                         @endguest
                     </ul>
 

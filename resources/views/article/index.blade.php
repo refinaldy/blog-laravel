@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Halaman Artikel</h1>
-    
+   
     @foreach ($articles->chunk(3) as $articleChunk)
         <div class="row mr-2 ml-2">
             @foreach ($articleChunk as $article)
